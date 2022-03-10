@@ -107,6 +107,7 @@ struct IssueReporter: View {
             return
         }
 
+
         UIApplication.shared.open(urlToOpen)
     }
 

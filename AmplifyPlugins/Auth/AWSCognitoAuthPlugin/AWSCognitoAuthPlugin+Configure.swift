@@ -34,7 +34,7 @@ extension AWSCognitoAuthPlugin {
             let configurationData =  try JSONEncoder().encode(jsonValueConfiguration)
             let authConfig = (try? JSONSerialization.jsonObject(with: configurationData, options: [])
                 as? [String: Any]) ?? [:]
-            AWSInfo.configureDefaultAWSInfo(authConfig)
+            AWSInfo.configureDefaultAWSInfo(authConfig!)
             let awsMobileClient = try awsMobileClientAdapter(from: jsonValueConfiguration)
             try awsMobileClient.initialize()
             let authenticationProvider = AuthenticationProviderAdapter(awsMobileClient: awsMobileClient)

@@ -94,7 +94,7 @@ extension IdentifyConfiguration: Decodable {
         guard let textRegionString = try? container.decodeIfPresent(String.self, forKey: .region) as NSString? else {
             return nil
         }
-        return textRegionString.aws_regionTypeValue()
+        return textRegionString!.aws_regionTypeValue()
     }
 }
 

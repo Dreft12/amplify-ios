@@ -30,7 +30,7 @@ public class AmplifyAWSCredentialsProvider: NSObject, AWSCredentialsProvider {
                 return
         }
 
-        authPlugin.invalidateCachedTemporaryCredentials()
+        authPlugin!.invalidateCachedTemporaryCredentials()
     }
 
     private func parseAWSCredentialsFromSession(_ session: AuthSession,

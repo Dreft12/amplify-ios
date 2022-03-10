@@ -38,7 +38,7 @@ public class AWSPollyOperation: AmplifyOperation<
         }
 
         if let error = try? request.validate() {
-            dispatch(result: .failure(error))
+            dispatch(result: .failure(error!))
             finish()
             return
         }
